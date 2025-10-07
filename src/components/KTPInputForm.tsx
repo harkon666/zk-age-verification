@@ -64,7 +64,7 @@ const KTPInputForm = ({ onSubmit, isLoading = false }: KTPInputFormProps) => {
     if (!ktpData.tanggalLahir || !dateRegex.test(ktpData.tanggalLahir)) {
       newErrors.tanggalLahir = 'Format tanggal: DD-MM-YYYY'
     } else {
-      const [day, month, year] = ktpData.tanggalLahir.split('-').map(Number)
+      const [day, month] = ktpData.tanggalLahir.split('-').map(Number)
       // if (day < 1 || day > 31 || month < 1 || month > 12 || year < 1900 || year > 2010) {
       //   newErrors.tanggalLahir = 'Tanggal lahir tidak valid'
       // }
